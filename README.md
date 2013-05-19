@@ -17,6 +17,46 @@ http://www.saggingcouch.com/
 
 FirePHP
 0.3.2
+http://www.firephp.org/HQ/Install.htm
 
 Codeigniter REST Server
 https://github.com/philsturgeon/codeigniter-restserver
+
+
+## Tips and Tricks
+
+How to configure your Environments
+At the top of the index.php for the CI app you will see a section that has a switch statement that looks like this
+
+	$server_name=$_SERVER['SERVER_NAME'];
+ 
+ 	switch($server_name)
+ 	{
+	 case 'dev.blah.com':
+	 $env='development';
+	 break;
+	 case 'blah.com':
+	 $env='production';
+	 break;
+	 case 'test.blah.com':
+	 $env='test';
+	 break;
+	 case 'www.blah.com':
+	 $env='production';
+	 break;
+	 default:
+	 $env='local';
+	 
+	 break;
+	 	
+ 	}
+
+	
+
+
+
+How to Use the Couch DB Driver
+
+
+
+
