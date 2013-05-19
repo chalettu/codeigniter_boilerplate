@@ -114,6 +114,7 @@ When you create a method name in this class you must specify the http method.  M
 
 YOU MUST INCLUDE THE TYPE OF HTTP_METHOD AT THE END OF THE FUNCTION NAME
 Example **
+
 	function test_get()
 	{
 			$user=array('test');
