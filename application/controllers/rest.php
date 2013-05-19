@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+require(LIBRARY_PATH.'REST_Controller.php');
 
-class Welcome extends CI_Controller {
+class Rest extends REST_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -17,12 +18,13 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function test_get()
 	{
-		$this->load->view('welcome_message');
+	//	$this->load->view('welcome_message');
 		$this->log->info('testing');
 		$this->load->model('users_model','users');
-		
+		$user=array('test');
+		$this->response($user, 200);	
 		//$this->users->getUserByUserId('blah@blah.com');
 	}
 }

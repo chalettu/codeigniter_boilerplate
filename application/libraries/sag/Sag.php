@@ -127,12 +127,16 @@ class Sag {
     }
 
     // restore previous decode value, if any
+    if (!isset($prevDecode))
+    {
+	    $prevDecode='';
+    }
     if(is_bool($prevDecode)) {
       $this->httpAdapter->decodeResp = $prevDecode;
     }
 
     // restore previous timeout vlaues, if any
-    if(is_array($prevTimeouts)) {
+    if(isset($prevTimeouts) && is_array($prevTimeouts)) {
       $this->httpAdapter->setTimeoutsFromArray($prevTimeouts);
     }
 
