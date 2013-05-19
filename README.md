@@ -82,5 +82,21 @@ You can find an example in /application/models/users_model.php
 
 	 }
 
+## How to log data with my Logging class
+
+The logging class is always included with every page so no need to instantiate it.
+
+To log something you just need to call the logging class like
+
+	$this->log->info("hello world"); or $this->log->info($data);
+	
+If you want to see the data in firebug or in PHP's error log all you need to is to enable debugging
+
+To enable debugging hit any url in your codeigniter site and add debug=true.  Example blah.com/?debug=true
+
+
+## How to Use the REST Server Classes to make a RESTful endpoint
+
+
 
 
