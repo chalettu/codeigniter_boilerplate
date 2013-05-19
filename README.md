@@ -89,7 +89,7 @@ The logging class is always included with every page so no need to instantiate i
 
 To log something you just need to call the logging class like
 
-	**$this->log->info("hello world"); or $this->log->info($data);**
+	$this->log->info("hello world"); or $this->log->info($data);
 	
 If you want to see the data in firebug or in PHP's error log all you need to is to enable debugging
 
@@ -113,7 +113,7 @@ In order to create a restful endpoint all you need to do is create a controller 
 When you create a method name in this class you must specify the http method.  Methods supported are **get,post,put,delete**
 
 YOU MUST INCLUDE THE TYPE OF HTTP_METHOD AT THE END OF THE FUNCTION NAME
-Example **
+Example **function test_get()**
 
 	function test_get()
 	{
