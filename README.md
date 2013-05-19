@@ -64,7 +64,8 @@ To configure couch db driver
 
 Create a model that extends CI_Sag
 You can find an example in /application/models/users_model.php
-	
+
+
 	class Users_model extends CI_Sag
 	{
 
