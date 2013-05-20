@@ -1,7 +1,7 @@
 <?php
 
 
-class Users_model extends CI_Sag
+class Users_model extends DB
 {
 
  function __construct()
@@ -11,7 +11,7 @@ class Users_model extends CI_Sag
  }
  function getUserByUserId($id)
  {
-	 $result=$this->get($id."?include_docs=true");
+ 	 $result=$this->get($id."?include_docs=true");
 	 $this->ci->log->info($result);
  }
 

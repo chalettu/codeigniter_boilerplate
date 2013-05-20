@@ -19,6 +19,8 @@
  *
  */
 
+
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -27,6 +29,7 @@
  * Different environments will require different levels of error reporting.
  * By default development will show errors but testing and live will hide them.
  */
+ 
  $server_name=$_SERVER['SERVER_NAME'];
  
  	switch($server_name)

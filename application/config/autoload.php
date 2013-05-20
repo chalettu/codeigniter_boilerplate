@@ -1,4 +1,12 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+function __autoload($class)
+{
+ if(strpos($class, 'CI_') !== 0)
+ {
+  @include_once( APPPATH . 'core/'. $class . EXT );
+ }
+}
+
 /*
 | -------------------------------------------------------------------
 | AUTO-LOADER
@@ -64,7 +72,7 @@ $autoload['libraries'] = array('session','log');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array('site','url');
 
 
 /*

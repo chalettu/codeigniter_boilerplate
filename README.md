@@ -63,11 +63,11 @@ To configure couch db driver
 1. Edit the couch config file for each environment. **Example: /application/config/local/couch_db.php**
 
 
-Create a model that extends CI_Sag
+Create a model that extends DB
 You can find an **example in /application/models/users_model.php**
 
 
-	class Users_model extends CI_Sag
+	class Users_model extends DB
 	{
 
 	function __construct()

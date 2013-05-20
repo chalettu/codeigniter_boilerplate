@@ -2,7 +2,7 @@
 
 require_once(LIBRARY_PATH.'/sag/Sag.php');
 
-class CI_Sag extends Sag
+class DB extends Sag
 {
 
 function __construct()
