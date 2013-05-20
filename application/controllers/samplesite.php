@@ -20,7 +20,7 @@ class Samplesite extends CI_Controller {
 	public function index()
 	{
 	
-		includeJSFile('jquery-2.0.0.min.js');
+		includeJSFile('jquery-2.0.0.min');
 		$this->load->view('public/site');
 		
 	}

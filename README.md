@@ -55,6 +55,7 @@ Change the switch statement to match your websites domain names.  For each envir
 
 
 
+
 ## How to Use the Couch DB Driver
 
 I made some classes and infrastructure to help make it easy to use SaggingCouch php library .  
@@ -134,6 +135,24 @@ Option 1. add the output format in as part of the URL . **Example http://blah.co
 
 Option 2. add the output format in as part of the URL Querystring **Example http://blah.com/rest/test/?format=json**
 
+### Javascript helper
 
+I wrote a helper file that helps you render javascript source tags
+
+If you look at an example in /Application/controllers/samplesite.php you will see something like 
+
+	includeJSFile('jquery-2.0.0.min');
+
+This will write out the JS source tag in a view if you call the function 
+
+	renderJavascriptTags();
+	
+Please see /Applications/views/public/footer.php for an example.
+
+
+NOTE : If you have a JS file you would like to be included that has things like onload or onready functions please add them using the following function 
+	includeJSOnload($filename,$admin='');
+
+Doing this ensures it will load after all the other JS includes have been rendered.  IE - a page includes file loads after jquery and other standard includes load .
 
 
