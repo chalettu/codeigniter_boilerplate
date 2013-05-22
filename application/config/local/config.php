@@ -18,6 +18,9 @@ define('SERVER_PROTOCOL',($_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http'));
 $config['base_url']	= SERVER_PROTOCOL . "://{$_SERVER['HTTP_HOST']}/";
 define('CDN_URL',$_SERVER['HTTP_HOST']);
 
+$config['s3_access_key_id']='';
+$config['s3_secret_key']='';
+
 /*
 |--------------------------------------------------------------------------
 | Index File
