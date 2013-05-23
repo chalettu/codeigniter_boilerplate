@@ -21,6 +21,7 @@ class Samplesite extends CI_Controller {
 	{
 	
 		includeJSFile('jquery-2.0.0.min');
+		includeJSFile('parsley.min');
 		$this->load->view('public/site');
 		
 	}

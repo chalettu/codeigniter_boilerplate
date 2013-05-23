@@ -71,7 +71,7 @@ function renderJavascriptTags()
 	{
 		foreach($ci->data->page_includes as $include)
 		{
-			echo '<script src="'. $include.'"></script>';
+			echo '<script src="'. $include."\"></script>"."\n\n";
 		}	
 	}
 
