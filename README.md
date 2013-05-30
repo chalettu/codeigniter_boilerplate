@@ -23,6 +23,15 @@ Codeigniter REST Server
 https://github.com/philsturgeon/codeigniter-restserver
 
 
+## Javascript Libraries I included in my boilerplate
+
+Jquery V 2.0.0 http://jquery.com/
+
+Handlebars V 1.0.0.3 rc3 http://handlebarsjs.com/
+
+Parsley JS 1.1.16 http://parsleyjs.org/
+
+
 ## Tips and Tricks
 
 How to configure your Environments
