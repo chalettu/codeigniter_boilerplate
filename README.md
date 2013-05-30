@@ -99,7 +99,7 @@ The logging class is always included with every page so no need to instantiate i
 
 To log something you just need to call the logging class like
 
-	$this->log->info("hello world"); or $this->log->info($data);
+	$this->logger->info("hello world"); or $this->logger->info($data);
 	
 If you want to see the data in firebug or in PHP's error log all you need to is to enable debugging
 

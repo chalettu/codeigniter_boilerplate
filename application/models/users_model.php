@@ -12,7 +12,7 @@ class Users_model extends DB
  function getUserByUserId($id)
  {
  	 $result=$this->get($id."?include_docs=true");
-	 $this->ci->log->info($result);
+	 $this->ci->logger->info($result);
  }
 
 }

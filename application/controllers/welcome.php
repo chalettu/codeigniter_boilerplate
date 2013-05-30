@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('welcome_message');
-		$this->log->info('testing');
+		$this->logger->info('testing');
 		$this->load->model('users_model','users');
 		
 		//$this->users->getUserByUserId('blah@blah.com');

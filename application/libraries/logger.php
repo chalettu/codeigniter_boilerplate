@@ -1,7 +1,7 @@
 <?php 
 require_once(LIBRARY_PATH.'/FirePHPCore/fb.php');
 
-class log
+class logger
 {
 	
 	function __construct()
