@@ -61,9 +61,10 @@ function renderJavascriptTags()
 	$ci=& get_instance();
 	if (isset($ci->data->js_includes) && count($ci->data->js_includes) >0)
 	{
+	//echo implode("\r\n",$ci->data->page_includes);
 		foreach($ci->data->js_includes as $include)
 		{
-			echo '<script src="'. $include.'"></script>';
+			echo '<script src="'. $include.'"></script>'."\n";
 		}	
 	}
 	
@@ -71,7 +72,7 @@ function renderJavascriptTags()
 	{
 		foreach($ci->data->page_includes as $include)
 		{
-			echo '<script src="'. $include."\"></script>"."\n\n";
+			echo '<script src="'. $include."\"></script>"."\n";
 		}	
 	}
 

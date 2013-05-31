@@ -74,6 +74,7 @@
 
 		<p>If you would like to view a simple Javascript Demo of Parsley and Handlebars <a href="<?php echo site_url("js_demo");?>">click here</a></p>
 
+	<p>If you would like to view a simple CouchDB Demo <a href="<?php echo site_url("couch_demo");?>">click here</a></p>
 		<p>If you would like to edit this page you'll find it located at:</p>
 		<code>application/views/welcome_message.php</code>
 
