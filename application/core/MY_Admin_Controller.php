@@ -1,8 +1,7 @@
 <?php
-
-class Admin_Controller extends MY_Controller
+class MY_Admin_Controller extends CI_Controller
 {
-	var $data;
+  var $data;
     function __construct()
     {
         parent::__construct();
@@ -21,6 +20,5 @@ class Admin_Controller extends MY_Controller
 		}
 		
 		
-	}
-			
+	}   	
 }

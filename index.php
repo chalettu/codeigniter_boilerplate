@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors',1);
 
 /*
  *---------------------------------------------------------------
@@ -18,9 +19,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-
-
-
+	define('ENVIRONMENT', 'development');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -29,40 +28,13 @@
  * Different environments will require different levels of error reporting.
  * By default development will show errors but testing and live will hide them.
  */
- 
- $server_name=$_SERVER['SERVER_NAME'];
- 
- 	switch($server_name)
- 	{
-	 case 'dev.blah.com':
-	 $env='development';
-	 break;
-	 case 'blah.com':
-	 $env='production';
-	 break;
-	 case 'test.blah.com':
-	 $env='test';
-	 break;
-	 case 'www.blah.com':
-	 $env='production';
-	 break;
-	 default:
-	 $env='local';
-	 
-	 break;
-	 	
- 	}
- 	
-	define('ENVIRONMENT', $env);
-
 
 if (defined('ENVIRONMENT'))
 {
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-		case 'local':
-			error_reporting(E_ERROR);
+			error_reporting(E_ALL);
 		break;
 	
 		case 'testing':
@@ -71,11 +43,9 @@ if (defined('ENVIRONMENT'))
 		break;
 
 		default:
-			ini_set('display_errors',1);
 			exit('The application environment is not set correctly.');
 	}
 }
-ini_set('display_errors',1);
 
 /*
  *---------------------------------------------------------------
@@ -230,9 +200,33 @@ ini_set('display_errors',1);
  * And away we go...
  *
  */
-   $app_path=str_replace('/system','',BASEPATH);
-   define('LIBRARY_PATH',$app_path.APPPATH.'libraries/');
+/*
+$autoload_classes=array('MY_Admin_Controller','MY_Public_Controller','MY_REST_Controller');
+//require_once($system_path.'/core/Controller.php');
+foreach($autoload_classes as $class)
+{
+	
+	echo (APPPATH.'core/'.$class.'.php');
+include_once(APPPATH.'core/'.$class.'.php');
+
+
+
+}
+*/
+function custom_autoload($class)
+{
+  //$path = array('core', 'libraries', 'models');
+
+  if(strpos($class, 'CI_') !== 0)
+ {
+  @include_once( APPPATH . 'core/'. $class . EXT );
+ }
  
+}
+
+spl_autoload_register('custom_autoload');
+//require FCPATH . 'vendor/autoload.php';
+
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */

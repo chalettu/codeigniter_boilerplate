@@ -1,5 +1,5 @@
 <?php
-class Public_Controller extends MY_Controller
+class MY_Public_Controller extends CI_Controller
 {
     /*
 	function __construct()

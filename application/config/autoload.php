@@ -1,12 +1,4 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-function __autoload($class)
-{
- if(strpos($class, 'CI_') !== 0)
- {
-  @include_once( APPPATH . 'core/'. $class . EXT );
- }
-}
-
 /*
 | -------------------------------------------------------------------
 | AUTO-LOADER
@@ -43,7 +35,19 @@ function __autoload($class)
 |
 |  $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
 |
+
+$autoload_classes=array('MY_Admin_Controller','MY_Public_Controller','MY_REST_Controller');
+foreach($autoload_classes as $class)
+{
+	echo (APPPATH.'core/'.$class.'.php');
+//include_once(APPPATH.'core/'.$class.'.php');
+
+
+
+}
+
 */
+
 
 $autoload['packages'] = array();
 
@@ -60,7 +64,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('session','logger');
+$autoload['libraries'] = array();
 
 
 /*
@@ -72,7 +76,7 @@ $autoload['libraries'] = array('session','logger');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('site','url');
+$autoload['helper'] = array();
 
 
 /*

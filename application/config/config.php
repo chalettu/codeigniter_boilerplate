@@ -14,12 +14,8 @@
 | path to your installation.
 |
 */
-define('SERVER_PROTOCOL',($_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http'));
-$config['base_url']	= SERVER_PROTOCOL . "://{$_SERVER['HTTP_HOST']}/";
+$config['base_url']	= '';
 
-define('CDN_URL',$_SERVER['HTTP_HOST']);
-$config['s3_access_key_id']='';
-$config['s3_secret_key']='';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -30,7 +26,7 @@ $config['s3_secret_key']='';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
